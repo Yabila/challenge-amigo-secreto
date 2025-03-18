@@ -32,5 +32,9 @@ function actualizarLista() {
 }
 //función para sortear los amigos
 function sortearAmigo() {
-    
+    //validar que haya amigos
+    if (!amigos.length) {
+        alert("No se ha ingresado nombres, ingresa un nombre para sortear");
+        return;
+    }
 }
