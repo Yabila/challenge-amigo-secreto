@@ -12,6 +12,11 @@ function agregarAmigo() {
         alert("No ingresó un nombre, ingresa uno");
         return;
     }
+    //Para que no se repitan nombres en el array
+    if(amigos.includes(nombre)){
+        alert (`"${nombre}" ya está en la lista, ingresa otro nombre`);
+        return;
+    }
     //actualiza el array
     amigos.push(nombre);
     //limpiar el campo
