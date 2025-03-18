@@ -19,7 +19,15 @@ function agregarAmigo() {
 }
 //función actualizar la lista de amigos
 function actualizarLista() {
-    
+    //limpiar lista
+    listaElementos.innerHTML="";
+    //iterar sobre el arreglo
+    for(let i=0; i<amigos.length; i++) {
+        let item=document.createElement("li");
+        //agrega elementos a la lista
+        item.textContent=amigos[i];
+        listaElementos.appendChild(item);
+    }
 }
 //función para sortear los amigos
 function sortearAmigo() {
