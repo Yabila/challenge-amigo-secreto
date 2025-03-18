@@ -42,4 +42,13 @@ function sortearAmigo() {
         alert("No se ha ingresado nombres, ingresa un nombre para sortear");
         return;
     }
+    //genera índice aleatorio con Math.
+    let indiceSorteado=Math.floor(Math.random()*amigos.length);
+    let amigoSorteado=amigos[indiceSorteado];
+    //obtiene el nombre del amigo secreto
+    let resultado=document.getElementById("resultado");
+    resultado.innerHTML=`Amigo sorteado: ${amigoSorteado}`;
+    //muestra el resultado en la lista resultado
+    let lista=document.getElementById("listaAmigos");
+    lista.innerHTML="";
 }
